@@ -1,4 +1,5 @@
 const axios = require('axios');
+const { getContent } = require('./parseService.js');
 
 const seen = new Set();
 
@@ -15,7 +16,7 @@ async function recursiveFetch(url, path, root) {
 
         // todo: save data with another service 
 
-        const { pageLinks, assetsLinks } = getContent(); // todo: get contents and links with another service 
+        const { pageLinks, assetsLinks } = getContent(data, url, root); // get internal links and assets
 
         for (const link of assetsLinks) {
             try {
