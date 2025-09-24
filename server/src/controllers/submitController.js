@@ -27,14 +27,5 @@ async function submit(req, res) {
     }
 }
 
-async function listArchived(req, res) {
-}
 
-async function listArchivedByTimestamp(req, res) {
-}
-
-module.exports = {
-    submit,
-    listArchived,
-    listArchivedByTimestamp
-}
+module.exports = submit;
