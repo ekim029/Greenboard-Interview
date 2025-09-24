@@ -11,21 +11,21 @@ Each snapshot is stored with assets, and users can view past archived versions b
 
 #### Clone the repository:
 
-git clone <repo>
-cd <repo>
+git clone 'repo name'
+cd 'repo name'
 
 
 #### Install dependencies:
 
 npm install
 
-Create a .env file in the root directory with: PORT=<port>
+Create a .env file in the root directory with: PORT= 'port number'
 
 
 #### Run the server:
 
 npm run dev
-# dev": "nodemon src/index.js"
+"dev": "nodemon src/index.js"
 
 ### 2. Frontend (React)
 
