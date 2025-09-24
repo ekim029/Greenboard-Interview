@@ -33,6 +33,8 @@ async function recursiveFetch(url, storePath, root) {
 
     } catch (err) {
         console.log(err.message);
+    } finally {
+        seen.clear();
     }
 }
 
