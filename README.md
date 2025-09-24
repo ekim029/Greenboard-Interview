@@ -12,6 +12,7 @@ Each snapshot is stored with assets, and users can view past archived versions b
 #### Clone the repository:
 
 git clone 'repo name'
+
 cd 'repo name'
 
 
@@ -25,6 +26,7 @@ Create a .env file in the root directory with: PORT= 'port number'
 #### Run the server:
 
 npm run dev
+
 "dev": "nodemon src/index.js"
 
 ### 2. Frontend (React)
@@ -32,7 +34,9 @@ npm run dev
 #### Start the React frontend (assuming in /client folder):
 
 cd client
+
 npm install
+
 npm start
 
 
