@@ -25,7 +25,10 @@ cd server
 npm install
 ```
 
-Create a .env file in the root directory with: ```bash PORT= 'port number' ```
+Create a .env file in the root directory with: 
+```bash
+PORT= 'port number'
+```
 
 
 #### Run the server:
@@ -37,7 +40,7 @@ npm run dev
 
 ### 2. Frontend (React)
 
-#### Start the React frontend (assuming in /client folder):
+#### Start the React frontend (assuming in /root directory):
 
 ```bash
 cd client
