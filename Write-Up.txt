@@ -1,0 +1,44 @@
+Write-up
+
+
+Decisions and Trade-offs:
+
+- Backend/Frontend: Chose Express for backend API and React for frontend (requirement). 
+Considered Spring, but opted for Node for fast startup time and lighter structure.
+
+- Data storage: Used local storage (requirement) for snapshots. Easier to debug and avoids complexity of external DB or storage for this scale
+
+- fs operations: Used synchronous fs.mkdirSync and fs.writeFileSync for simplicity. Trade off was more blocking operations, but acceptable for this scale.
+Considered using fs.promises or async versions, but settled to level alongside local storage
+
+- HTML parsing: Used cheerio to parse and manipulate the HTML. Trade off was dynamic content not captured but acceptable for this scale.
+
+
+What I'd Do Differently With More Time:
+
+- Database integration: Store metadata in a database for scalability and faster querying.
+Use SQL databases if data is normalized and snapshots need to be compared
+Use NOSQL databases if snapshots are kept unstructured
+
+- Distributed Storage: Use cloud storage (e.g., AWS S3) for snapshots to handle larger volumes of data. 
+Extra cost, but worth it in the long run for scaling, especially for media-heavy sites.
+
+- Background job queue: Offload the crawling and saving of sites to a job queue.
+
+- Snapshot difference: Show differences between snapshots (visual differences, text differences, structural differences etc.).
+
+- Authentication: Add user authorization & authentication for personal or shared archives.
+
+
+Scaling for Production:
+
+- Containerization: Use Docker to containerize the app (Docker)
+
+- Horizontal Scaling: Separate services for API, frontend, and snapshot crawling; scale them independently.
+
+- Load Balancing: Place API behind a load balancer for handling multiple requests.
+
+- Caching: Use caching for frequently accessed snapshot metadata.
+Redis pairs well with Node
+
+- Rate Limiting & Security: Implement rate limiting middleware to prevent abuse.
