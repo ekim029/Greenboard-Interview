@@ -11,33 +11,41 @@ Each snapshot is stored with assets, and users can view past archived versions b
 
 #### Clone the repository:
 
+```bash
 git clone 'repo name'
 
 cd 'repo name'
 
+cd server
+```
 
 #### Install dependencies:
 
+```bash
 npm install
+```
 
-Create a .env file in the root directory with: PORT= 'port number'
+Create a .env file in the root directory with: ```bash PORT= 'port number' ```
 
 
 #### Run the server:
 
+```bash
 npm run dev
+```
 
-"dev": "nodemon src/index.js"
 
 ### 2. Frontend (React)
 
 #### Start the React frontend (assuming in /client folder):
 
+```bash
 cd client
 
 npm install
 
 npm start
+```
 
 
 #### Usage
